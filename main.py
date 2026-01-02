@@ -15,25 +15,30 @@ type = int(input("Enter the number of your choice: "))
 class UpperBody:
 
     push_chest_compound = [
-        "Barbell Bench Press",
-        "Dumbbell Bench Press",
-        "Dumbell Incline Press",
-        "Push-Ups"]
+        "Barbell Bench Press 3x6-8",
+        "Dumbbell Bench Press 3x6-8",
+        "Dumbell Incline Press 3x6-8",
+        "Deficit Push-Ups 3xfailure"]
     
     push_shoulder_compound = [
-        "Overhead Press",
-        "Dumbbell Shoulder Press",
-        "Upright Barbell Row",
-        ]
+        "Overhead Press 3x6-8",
+        "Dumbbell Shoulder Press 3x6-8",
+        "Upright Barbell Row 3x6-8",]
     
-    pull
+    pull_back_compound = [
+        "Seated Row 3x6-8",
+        "Barbell Row 3x6-8",]
     
-    upper_isolation = [
-        "Bicep Curls",
-        "Tricep Extension",
-        "Lateral Raise",
-        "Shoulder Press",
+    pull_lat_compound = [
+        "Lat Pulldowns 3x10-12",
+        "Pull-ups 3xfailure"
     ]
-
-    def 
+    
+    upper_accessory = [
+        "Bicep Curls 2x10-12",
+        "Tricep Extension 2x10-12",
+        "Lateral Raise 2x10-12",]
+    
+    def upper_body_generator():
+        
 
