@@ -34,11 +34,13 @@ upper_accessory = [
     "Tricep Extension 2x10-12",
     "Lateral Raise 2x10-12",]
 
-if type == 1:
-    print(random.choice(upper_chest_compound))
-    print(random.choice(upper_shoulder_compound))
-    print(random.choice(upper_back_compound))
-    print(random.choice(upper_lat_compound))
-    print(random.choice(upper_accessory))
-    print(random.choice(upper_accessory))
+upper_workout = [
+    random.choice(upper_chest_compound),
+    random.choice(upper_shoulder_compound),
+    random.choice(upper_back_compound),
+    random.choice(upper_lat_compound),
+    random.choice(upper_accessory),
+    random.choice(upper_accessory)]
 
+if type == 1:
+    print(*upper_workout, sep='\n')
