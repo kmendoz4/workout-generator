@@ -2,11 +2,10 @@ import random
 
 print("Welcome to my workout generator!")
 
-print("Choose the type of workout you want:")
-print("1. Upper Body")
-print("2. Lower Body")
-print("3. Full Body")
-print("4. HIIT/SIT")
+print("\n1. Generate Squat Day Workout")
+print("2. Generate Press Day Workout")
+print("3. Generate Deadlift Day Workout")
+print("4. Gemerate HIIT/SIT Day Workout")
 
 type = int(input("Enter the number of your choice: "))
 
