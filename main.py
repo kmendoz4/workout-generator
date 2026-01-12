@@ -7,6 +7,12 @@ workouts = {
                   "Normal Grip Lat Pulldown 2x10-12\nWide Grip Lat Pulldown 2x10-12"],
         "shoulder" : ["DB Shoulder Press 3x10\nRear Delt Flies 3x15", "BB Shoulder Press 3x10\nFront Raises3x12", "Cuban Press 4xAMRAP"],
         "arms" : ["Alternating Curls 2x6-8 to Drop Set\nSingle Arm Tricep Pulldowns 3x12", "Single DB Curls Superset with Overhead Tricep Extensions 3x12"]
+    },
+    "press" : {
+        "press_variations" : ["BB Bench Press 3x8", "DB Bench Press 3x8", "DB Incline Press 3x8"],
+        "legs" : ["BB Hip Thrust 3x8-10", "Hip Abduction 3x10\nHip Adduction 3x10", "RDLs 3x12", "Heel Elevated Goblet Squat 3x12"],
+        "shoulder" : ["DB Lat Raise Superset Rear Delt Flies 3xAMRAP", "Farmers Carry 3 sets"],
+        "arms" : ["Preacher Curl 3x12\nWrist Curls 3x12", "Zottman Curls 3x12\nTricep Pushdowns 3x12"]
     }
 }
 
@@ -15,8 +21,7 @@ def generate_workout(workout_type):
     exercise_list = workouts[workout_type].values()
 
     for exercises in exercise_list:
-        chosen_exercise = random.choice(exercises)
-        random_workout.append(chosen_exercise)
+        random_workout.append(random.choice(exercises))
     
     return random_workout
 
@@ -33,5 +38,6 @@ print("\nYour workout:\n")
 
 if type == 1:
     print("\n".join(generate_workout("squat")))
-
+elif type == 2:
+    print("\n".join(generate_workout("press")))
 print("\n")
