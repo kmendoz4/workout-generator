@@ -2,11 +2,8 @@ import random
 
 workouts = {
     "squat" : {
-        "squat_variations" : ["Back Squat 3x8", "Front Squat 3x8"],
-        "back" : ["Lat Pulldown 2x10-12 to Drop Set", "Pull-Ups 3x10-12", "Face Pulls 3x12\nBack Extensions 3x10",
-                  "Normal Grip Lat Pulldown 2x10-12\nWide Grip Lat Pulldown 2x10-12"],
-        "shoulder" : ["DB Shoulder Press 3x10\nRear Delt Flies 3x15", "BB Shoulder Press 3x10\nFront Raises3x12", "Cuban Press 4xAMRAP"],
-        "arms" : ["Alternating Curls 2x6-8 to Drop Set\nSingle Arm Tricep Pulldowns 3x12", "Single DB Curls Superset with Overhead Tricep Extensions 3x12"]
+        "secondary_lift" : ["Bulgarian Split Squat", "Leg Press", "Heel-Elevated Goblet Squat"],
+        "accessories" : ["Leg Extensions", "Sissy Squats", "Hip Thrusts", "Cable Kickbacks", "Abductor Machine", "Calf Raise", "Step-Ups(Quad Focused)", "Adductor Machine", "Copenhagen Planks", "Hanging Leg Raises", "Cable Crunches"]
     },
     "press" : {
         "press_variations" : ["BB Bench Press 3x8", "DB Bench Press 3x8", "DB Incline Press 3x8"],
@@ -31,11 +28,10 @@ def generate_workout(workout_type):
     
     return random_workout
 
-
 print("Welcome to my workout generator!")
 
 print("\n1. Generate Squat Day Workout")
-print("2. Generate Press Day Workout")
+print("2. Generate Push/Pull Workout")
 print("3. Generate Deadlift Day Workout")
 print("4. Gemerate HIIT/SIT Day Workout")
 
@@ -43,8 +39,10 @@ type = int(input("Enter the number of your choice: "))
 print("\nYour workout:\n")
 
 if type == 1:
+    print("\nMain Lift 3-5x3-6\nSecondary Lift 3-4x6-10\nAccessories 2-3x10-15")
     print("\n".join(generate_workout("squat")))
 elif type == 2:
+    print("\nMain Push ")
     print("\n".join(generate_workout("press")))
 elif type == 3:
     print("\n".join(generate_workout("deadlift")))
