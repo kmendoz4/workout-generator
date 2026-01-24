@@ -5,19 +5,21 @@ workouts = {
         "secondary_lift" : ["Bulgarian Split Squat", "Leg Press", "Heel-Elevated Goblet Squat"],
         "accessories" : ["Leg Extensions", "Sissy Squats", "Hip Thrusts", "Cable Kickbacks", "Abductor Machine", "Calf Raise", "Step-Ups(Quad Focused)", "Adductor Machine", "Copenhagen Planks", "Hanging Leg Raises", "Cable Crunches"]
     },
-    "press" : {
-        "press_variations" : ["BB Bench Press 3x8", "DB Bench Press 3x8", "DB Incline Press 3x8"],
-        "legs" : ["BB Hip Thrust 3x8-10", "Hip Abduction 3x10\nHip Adduction 3x10", "RDLs 3x12", "Heel Elevated Goblet Squat 3x12"],
-        "shoulder" : ["DB Lat Raise Superset Rear Delt Flies 3xAMRAP", "Farmers Carry 3 sets"],
-        "arms" : ["Preacher Curl 3x12\nWrist Curls 3x12", "Zottman Curls 3x12\nTricep Pushdowns 3x12"]
+    "push/pull" : {
+        "shoulders" : ["DB Lateral Raises", "Cable Lateral Raises", "Upright Cable Raises (light)"],
+        "chest" : ["Pec Deck", "Incline Cable Flyes"],
+        "back" : ["Single-Arm Cable Rows", "Straight-Arm Pulldowns", "Face Pulls"],
+        "arms" : ["EZ-Bar Curls", "Incline DB Curls", "Rope Tricep Pushdowns", "Overhead Tricep Extenstions"]
     },
     "deadlift" : {
-        "deadlift_variation" : ["Deadlift 3x5", "Deadlift 3x8"],
-        "chest" : ["Decline Push-Ups 3xAMRAP", "Chest Flies 3x10"],
-        "back" : ["DB Single Arm Row 3x10", "Seated Row 3x10", "Face Pulls 3x12\nStraight Arm Pulldowns 3x12"],
-        "legs" : ["Leg Extensions 3x10\nHamstring Curl 3x10\nCalf Raises 3x12"]
+        "secondary_lift" : ["Hip Thrust", "Barbell Good Morning", "Deficit RDL"],
+        "accessories" : ["Seated Hamstring Curl", "Nordic Curl", "Cable Pull-Throughs", "Reverse Lunges", "Smith Machine Lunges", "Back Extensions", "EZ Bar Curls", "DB Curls", "Tricep Pushdowns"]
     }
 }
+
+# ideas - make push/pull into one accessories dictionary moment
+# ask it to pick a day, then a main compound lift, then ask how many accessories they want
+# the generator will have workout_type AND number of accessories as a parameter
 
 def generate_workout(workout_type):
     random_workout = []
