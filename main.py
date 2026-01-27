@@ -21,13 +21,14 @@ workouts = {
 # ask it to pick a day, then a main compound lift, then ask how many accessories they want
 # the generator will have workout_type AND number of accessories as a parameter
 
-def generate_workout(workout_type):
+def generate_workout(workout_type, accessories_count):
     random_workout = []
-    exercise_list = workouts[workout_type].values()
 
-    for exercises in exercise_list:
-        random_workout.append(random.choice(exercises))
-    
+    for exercises in workouts[workout_type].values():
+        # Pick the smaller of: accessories_count or number of available exercises
+        num_to_pick = min(accessories_count, len(exercises))
+        random_workout.extend(random.sample(exercises, k=num_to_pick))
+
     return random_workout
 
 print("Welcome to my workout generator!")
@@ -38,14 +39,14 @@ print("3. Generate Deadlift Day Workout")
 print("4. Gemerate HIIT/SIT Day Workout")
 
 type = int(input("Enter the number of your choice: "))
+accessories = int(input("\nEnter the number of accessories for this workout"))
 print("\nYour workout:\n")
 
 if type == 1:
-    print("\nMain Lift 3-5x3-6\nSecondary Lift 3-4x6-10\nAccessories 2-3x10-15")
-    print("\n".join(generate_workout("squat")))
+    print("\n".join(generate_workout("squat", accessories)))
 elif type == 2:
     print("\nMain Push ")
-    print("\n".join(generate_workout("press")))
+    print("\n".join(generate_workout("press", accessories)))
 elif type == 3:
-    print("\n".join(generate_workout("deadlift")))
-print("\n")
+    print("\n".join(generate_workout("deadlift", accessories)))
+    print("\n")
